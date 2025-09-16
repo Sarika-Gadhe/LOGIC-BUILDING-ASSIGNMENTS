@@ -62,10 +62,11 @@ void DisplayPrime(PNODE first)
             if(first->data % iCnt == 0)
             {
                 iFactCnt++;
+                break;   // no need to continue if already divisible
             }
         }
 
-        if(iFactCnt == 2)
+        if((iFactCnt == 0) && (first->data > 1))
         {
             printf("Prime number is : %d\n", first->data);
         }
@@ -100,4 +101,5 @@ int main()
 
     return 0;
 }
+
 

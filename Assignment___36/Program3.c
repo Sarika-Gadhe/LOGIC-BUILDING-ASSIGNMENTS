@@ -48,24 +48,36 @@ void InsertFirst(PPNODE first,int no)
     }
 }
 
-void DisplayProduct(PNODE first )
+void DisplayProduct(PNODE first)
 {
-    int iDigit = 1, iNo = 1,iProduct = 1;
+    int iDigit = 0, iNo = 0, iProduct = 1;
 
-    while(first != NULL)
+    if (first == NULL)
+    {
+        printf(" Linked list is empty.\n");
+        return;
+    }
+
+    while (first != NULL)
     {
         iNo = first->data;
         iProduct = 1;
 
-        while(iNo != 0)
+        while (iNo != 0)
         {
             iDigit = iNo % 10;
-            iProduct = iProduct * iDigit;
+
+            if (iDigit != 0)   
+            {
+                iProduct = iProduct * iDigit;
+            }
+
             iNo = iNo / 10;
         }
-        printf("Product of number is : %d\n",iProduct);
+
+        printf("Number : %d → Product of digits = %d\n", first->data, iProduct);
+
         first = first->next;
-       
     }
 
     printf("\n"); 
@@ -98,4 +110,5 @@ int main()
 
     return 0;
 }
+
 

@@ -17,12 +17,13 @@ This repository provides a structured set of **Logic Building Assignments** focu
 
 Each assignment is organized into an individual folder.
 
-LOGIC-BUILDING-ASSIGNMENTS/
-├── Assignment_1/
-├── Assignment_2/
-├── Assignment_3/
-├── ...
-└── README.md
+    ```text
+      LOGIC-BUILDING-ASSIGNMENTS/
+      ├── Assignment_1/
+      ├── Assignment_2/
+      ├── Assignment_3/
+      ├── ...
+      └── README.md
 
 Each folder includes:
 - One or more `.c`, `.cpp`, or `.java` files
